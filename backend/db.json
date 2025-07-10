@@ -1,0 +1,100 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstname": "John",
+      "lastname": "Doe",
+      "email": "testuser",
+      "password": "testpassword",
+      "phonenumber": "1234567890"
+    },
+    {
+      "id": "5f62",
+      "firstname": "bvn",
+      "lastname": "nbxz",
+      "email": "rimus2002@gmail.com",
+      "password": "Abcdefg1.",
+      "phonenumber": "09063268"
+    },
+    {
+      "id": "e7ce",
+      "firstname": "nmzx",
+      "lastname": "mnb",
+      "email": "divinediamond2015@gmail.com",
+      "password": "Abcdefg1.",
+      "phonenumber": "090"
+    },
+    {
+      "id": "abc1",
+      "firstname": "Temi",
+      "lastname": "Doe",
+      "email": "temi",
+      "password": "temi",
+      "phonenumber": "0000000000"
+    },
+    {
+      "email": "fombnup@gmail.com",
+      "password": "Abcdefg1.",
+      "firstname": "asmbsa",
+      "lastname": "Rimus",
+      "phoneNumber": "2344567893456"
+    },
+    {
+      "email": "abc@gg",
+      "password": "1234567890aA!",
+      "firstname": "ola",
+      "lastname": "ola",
+      "phoneNumber": "2341234567812"
+    },
+    {
+      "email": "abc@ggg",
+      "password": "1234567890aA!",
+      "firstname": "ola",
+      "lastname": "ola",
+      "phoneNumber": "2341234567812"
+    },
+    {
+      "email": "abc@gggg",
+      "password": "1234567890aA!",
+      "firstname": "ola",
+      "lastname": "ola",
+      "phoneNumber": "2341234567812"
+    },
+    {
+      "email": "abc@g",
+      "password": "1234567890aA!",
+      "firstname": "ola",
+      "lastname": "ola",
+      "phoneNumber": "2341234567812"
+    },
+    {
+      "email": "abc@gh",
+      "password": "1234567890aA!",
+      "firstname": "ola",
+      "lastname": "ola",
+      "phoneNumber": "2341234567812"
+    },
+    {
+      "email": "abc@ghm",
+      "password": "1234567890aA!",
+      "firstname": "ola",
+      "lastname": "ola",
+      "phoneNumber": "2341234567812"
+    },
+    {
+      "email": "fombnup@gmail.comb",
+      "password": "1mmmmmmmM.",
+      "firstname": "ndnd",
+      "lastname": "mnb",
+      "phoneNumber": "2344567893456"
+    },
+    {
+      "email": "sholay12345@gmail.com",
+      "password": "MMMMMMMMm1.",
+      "firstname": "bvn ",
+      "lastname": "nbxz",
+      "phoneNumber": "2344567893456"
+      
+    }
+  ]
+}

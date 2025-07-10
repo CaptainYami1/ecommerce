@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+.input {
+  @apply bg-slate-100 w-full text-sm px-4 py-3 rounded focus:bg-transparent outline-teal-500 transition-all;
+}
+
+.stdropdown-input {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.form-group {
+  width: 100%;
+}
+.stdropdown-flag {
+    font-family: "Twemoji Mozilla" !important;
+}
+
+.stdropdown-tools {
+  display: none;
+}
+
+.stdropdown-container {
+  text-align: left;
+  position: relative;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.stdropdown-input {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.stsearch-box input {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
