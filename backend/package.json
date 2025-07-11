@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "build":  "echo 'No build script defined'",
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
