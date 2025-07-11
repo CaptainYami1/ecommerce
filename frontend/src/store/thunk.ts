@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const URL_SERV = "http://localhost:3001";
+const URL_SERV = "https://ecommerce-6pbo.onrender.com";
 
 interface getEmailUserData {
   email: string;
