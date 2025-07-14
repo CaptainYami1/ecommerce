@@ -6,7 +6,7 @@ const Offers = () => {
   <div
     className="mx-auto w-screen max-w-screen-2xl px-16 sm:px-24  md:grid md:grid-cols-2 md:items-center md:gap-4 lg:px-32 bg-linear-to-b from-[#fde1ff] to-[#e1ffea22]"
   >
-    <div className="max-w-prose text-left items-center justify-center" >
+    <div className="py-6.5 max-w-prose text-left items-center justify-center" >
       <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
         Exclusive
       </h1>

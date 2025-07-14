@@ -9,8 +9,8 @@ const { all_product } = useContext(ShopContext)!;
 
   return (
     <div><div  className="dark:bg-gray-900 mb-[75px]">
-      <img src={Women_banner} alt="" className="block mb-[30px] pt-[30px] w-[82%] mx-auto " />
-      <div className="flex mx-[170px] justify-between items-center ">
+      <img src={Women_banner} alt="" className="block mb-[30px] pt-[30px] h-[300px] lg:h-full w-full mx-auto " />
+      <div className="flex px-6 lg:mx-[170px] lg:px-0 justify-between items-center ">
         <p className="text-teal-600 ">
           <span className="font-semibold">showing 1-12</span> out of 36
         </p>
@@ -19,8 +19,8 @@ const { all_product } = useContext(ShopContext)!;
         Sort by <FaChevronDown className="ml-[10px]"/>
       </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px] mx-[170px] my-[20px]">
-        {all_product.map((product: any) => {
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px] py-2.5 px-6 lg:mx-[170px] my-[20px]">
+          {all_product.map((product: any) => {
           if (product.category === "women") {
             return (
               

@@ -14,18 +14,21 @@ import Women from "./components/pages/women-men-kids/women";
 import Kids from "./components/pages/women-men-kids/kids";
 import Checkout from "./components/pages/checkout/checkout";
 import ProtectedRoute from "./components/protectedRoute/protectedRoute";
+import Confirmation from "./components/pages/confirmation page/confirmation";
 
 function App() {
   const { darkMode } = useContext(ShopContext)!;
   const user = localStorage.getItem("user");
+ const isConfirmationPage = location.pathname === "/confirmation";
 
   return (
     <BrowserRouter>
       <div className={darkMode ? "dark" : ""}>
-        <div className="dark:bg-gray-900">
-          <Navbar />
-          <div className="mt-20 pt-8.5">
+        <div className="dark:bg-gray-900 ">
+           {!isConfirmationPage && <Navbar />}
+          <div className="mt-20 pt-8.5  ">
             <Routes>
+              
               <Route path="/" element={<Shop />} />
 
               <Route path="/men" element={<Men />} />
@@ -50,10 +53,12 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+               <Route path="/confirmation" element={<Confirmation />} />
             </Routes>
           </div>
-          <Footer />
+           {!isConfirmationPage && <Footer />}
         </div>
+       
       </div>
     </BrowserRouter>
   );

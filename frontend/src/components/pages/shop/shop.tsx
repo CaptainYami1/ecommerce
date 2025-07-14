@@ -6,7 +6,7 @@ import Newsletter from "./newsletter/newsletter.tsx";
 
 function Shop() {
   return (
-    <div className="dark:bg-gray-900">
+    <div className="dark:bg-gray-900 mx-auto">
       <Carousel />
       <Popular />
       <Offers />

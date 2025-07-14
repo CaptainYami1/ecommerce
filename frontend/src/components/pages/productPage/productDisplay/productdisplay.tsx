@@ -196,6 +196,7 @@ const ProductDisplay = (props: any) => {
             </div>
           </div>
         </div>
+        <div className="px-4 md:px-0">
         <div className="flex items-center font-semibold mt-8 dark:text-white -mx-4 gap-4 border-b border-gray-200 dark:border-gray-700 ">
           <h1
             onClick={() => setDesandrev("description")}
@@ -218,12 +219,13 @@ const ProductDisplay = (props: any) => {
             Reviews
           </h1>
         </div>
+        
         {desandrev === "description" ? (
           <Description />
         ) : (
           <Reviews image={product?.image} />
         )}
-
+          </div>
         <RelatedProducts />
       </div>
     </div>

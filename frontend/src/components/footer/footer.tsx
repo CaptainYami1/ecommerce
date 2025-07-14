@@ -40,7 +40,7 @@ const Footer = () => {
 					</li>
 				</ul>
 			</div>
-			<div className="space-y-3">
+			<div className="text-end sm:text-start space-y-3">
 				<h3 className="tracking-wide uppercase text-teal-600 font-bold">Company</h3>
 				<ul className="space-y-1 text-teal-600">
 					<li>

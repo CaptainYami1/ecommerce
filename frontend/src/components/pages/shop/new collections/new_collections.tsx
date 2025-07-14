@@ -8,7 +8,7 @@ const NewCollections = () => {
         New Collections
       </h1>
       <hr className="w-[200px] h-[6px] rounded-[10px] bg-teal-800 mb-3.5" />
-      <div className="mt-50px grid grid-cols-4 gap-[30px]">
+      <div className="px-2 mt-50px grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
         {new_collections.map((product, i) => (
           <Items
             key={i}

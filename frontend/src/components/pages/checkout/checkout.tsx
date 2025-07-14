@@ -12,6 +12,9 @@ import Paypal from "./paypal/paypal";
 import Crypto from "./crypto payment/crypto";
 import useCrypto from "../../../hooks/useCrypto";
 import { ShopContext } from "../../../context/shopContext";
+import { ToastContainer, toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+
 
 const Checkout = () => {
   const [delivery, setDelivery] = useState(() => {
@@ -56,10 +59,20 @@ const Checkout = () => {
       return `${(orderTotal / (ton * (tether - 100))).toFixed(2)} ton`
     }else return null;
   }
+const dispatch = useDispatch()
+  const confirmation = ()=>{
+    if (delivery === "") {
+      toast.error("Please select a delivery option");
+    }else{
+      dispatch
+    }
+  }
 
   return (
     <div className="xl:grid xl:grid-cols-3 xl:gap-3 xl:px-10 sm:px-6 lg:px-8 mx-auto max-w-screen-2xl">
+      
       <div className="col-span-2 p-8 dark:text-white mx-2.5 bg-gray-100 dark:bg-gray-800 rounded-xl shadow-[0_2px_5px_rgba(0,0,0,0.25)] h-fit">
+        <ToastContainer position="top-right" autoClose={4000} theme="colored" />
         <button className="flex items-center gap-2 text-lg mb-6">
           <IoChevronBack /> Back
         </button>
@@ -199,7 +212,7 @@ const Checkout = () => {
           <button className="border border-gray-500 rounded-xl px-5 py-2 cursor-pointer">
             Back
           </button>
-          <button className="rounded-xl px-5 py-2 cursor-pointer bg-teal-600 hover:bg-teal-400 text-white">
+          <button className="rounded-xl px-5 py-2 cursor-pointer bg-teal-600 hover:bg-teal-400 text-white" onClick={confirmation}> 
             Confirm Payment{" "}
              {payment === "crypto"
                ? finalPrice()

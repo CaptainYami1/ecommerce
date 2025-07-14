@@ -32,7 +32,7 @@ function Carousel() {
     <>
       <section
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className="carousel h-100 bg-cover bg-left bg-no-repeat duration-1000 bg-[#ff562238] transition-transform animate-slide"
+        className="carousel w-full h-100 bg-cover bg-left bg-no-repeat duration-1000 bg-[#ff562238] transition-transform animate-slide"
       ></section>
     </>
   );

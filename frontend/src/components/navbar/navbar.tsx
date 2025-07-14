@@ -56,9 +56,9 @@ function Navbar() {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <header className="bg-white dark:bg-gray-900 py-3 fixed top-0 left-0 right-0 z-50 shadow-md dark:shadow-gray-800 ">
+      <header className="bg-white dark:bg-gray-900 py-3 fixed top-0  left-0 right-0  z-50 shadow-md dark:shadow-gray-800 ">
         <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between ">
+          <div className="flex h-16 items-center justify-between gap-4 min-w-0 ">
             <div className="md:flex md:items-center md:gap-12 ">
               <Link className="block text-teal-600 justify-items-center" to="/">
                 <span className="sr-only">Home</span>
@@ -93,7 +93,7 @@ function Navbar() {
       "tabsWrapperTemplate": "<div class=\"overflow-x-auto p-4 rounded-t-xl border-b border-gray-200 [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 dark:bg-neutral-800 dark:border-neutral-700\"></div>"
     }'
               >
-                <div className="sm:flex hidden">
+                <div className="lg:flex hidden">
                   <div className="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-3.5">
                     <svg
                       className="shrink-0 size-4 text-teal-600"
@@ -188,7 +188,7 @@ function Navbar() {
                 <div
                   onMouseOut={() => mouseOut()}
                   onMouseOver={() => mouseOver()}
-                  className="flex items-center justify-center gap-2 text-teal-600 hover:text-teal-800 cursor-pointer"
+                  className="hidden md:flex md:items-center md:justify-center md:gap-2 md:text-teal-600 hover:text-teal-800 cursor-pointer"
                 >
                   <AiOutlineUser size={30} />
                   <div className="text-[12px]">
