@@ -12,7 +12,7 @@ const Product = () => {
   const product = all_product.find((e) => e.id === Number(productId));
 
   return (
-    <div className="">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
       <Breadcrum product={product} />
       <ProductDisplay product={product} />
     </div>
