@@ -1,10 +1,10 @@
 import Items from "../../../reuseables/items";
 import new_collections from "./new_collections";
-
+ 
 const NewCollections = () => {
   return (
-    <div className="flex flex-col items-center gap-[10px] mt-[100px]">
-      <h1 className="text-teal-600 text-[50px] font-semibold">
+    <div className="flex flex-col items-center gap-[10px] mt-[100px] ">
+      <h1 className="text-teal-600 text-[50px] font-semibold text-center mx-auto" >
         New Collections
       </h1>
       <hr className="w-[200px] h-[6px] rounded-[10px] bg-teal-800 mb-3.5" />

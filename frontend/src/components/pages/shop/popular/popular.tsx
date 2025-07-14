@@ -5,8 +5,8 @@ function Popular() {
   return (
     <>
       <div>
-        <div className="flex flex-col items-center gap-[10px] mt-[100px] w-full mx-auto">
-          <h1 className="text-teal-600 text-[50px] font-semibold ">
+        <div className="flex flex-col items-center gap-[10px] mt-[100px] w-full mx-auto justify-center">
+          <h1 className="text-teal-600 text-[50px] font-semibold text-center">
             Popular For Women
           </h1>
           <hr className="w-[200px] h-[6px] rounded-[10px] bg-teal-800 mb-3.5" />
