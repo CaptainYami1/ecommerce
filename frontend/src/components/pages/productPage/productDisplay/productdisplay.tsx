@@ -21,14 +21,14 @@ const ProductDisplay = (props: any) => {
     return product?.new_price * quantity; // default case
   }
   return (
-    <div className="py-6">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
-        <div className="flex flex-col md:flex-row -mx-4">
+    <div className=" ">
+      <div className=" max-w-md md:max-w-7xl mx-auto w-full lg:px-8 mt-6">
+        <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8">
           {/* Left Image Panel */}
 
-          <div className="  rounded-lg  mb-4 flex w-full ">
+          <div className="  rounded-lg  mb-4 flex  ">
             <img src={product?.image} alt="" className="w-[440px] rounded-lg" />
-            <div className="mx-2 rounded-lg hidden md:flex flex-col gap-2">
+            <div className="mx-2 rounded-lg hidden md:flex flex-col items-center gap-2">
               <img
                 src={product?.image}
                 alt=""
@@ -53,7 +53,7 @@ const ProductDisplay = (props: any) => {
           </div>
 
           {/* Right Product Info */}
-          <div className="md:flex-1 px-4">
+          <div className="sm:flex-1 ">
             <h2 className="mb-2 leading-tight tracking-tight font-bold text-gray-800 dark:text-white text-2xl md:text-3xl">
               {product?.name}
             </h2>
@@ -196,7 +196,7 @@ const ProductDisplay = (props: any) => {
             </div>
           </div>
         </div>
-        <div className="px-4 md:px-0">
+        <div className="px-4 ">
         <div className="flex items-center font-semibold mt-8 dark:text-white -mx-4 gap-4 border-b border-gray-200 dark:border-gray-700 ">
           <h1
             onClick={() => setDesandrev("description")}

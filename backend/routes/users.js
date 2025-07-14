@@ -96,9 +96,9 @@ router.post("/users/order", async function (req, res, next) {
   }
 
   const orderWithId = {
-    id: uuidv4(),       // ✅ Generate unique ID
-    ...order,           // ✅ Merge the order details from frontend
-    date: new Date(),   // ✅ Optional: add server-side timestamp
+    id: uuidv4(),       
+    ...order,           
+    date: new Date(),   
   };
 
   if (!user.orders) {
@@ -107,12 +107,13 @@ router.post("/users/order", async function (req, res, next) {
 
   user.orders.push(orderWithId);
 
-  // If using a file-based DB, don't forget to write back to the file
-  await saveDB(db); // ← your DB save function
+ 
 
   res.status(200).json({
     message: "Order saved successfully",
     order: orderWithId,
   });
 });
+
+
 module.exports = router;
