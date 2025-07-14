@@ -26,9 +26,9 @@ const ProductDisplay = (props: any) => {
         <div className="flex flex-col md:flex-row -mx-4">
           {/* Left Image Panel */}
 
-          <div className="  rounded-lg  mb-4 flex ">
+          <div className="  rounded-lg  mb-4 flex w-full ">
             <img src={product?.image} alt="" className="w-[440px] rounded-lg" />
-            <div className="mx-2 rounded-lg">
+            <div className="mx-2 rounded-lg hidden md:flex flex-col gap-2">
               <img
                 src={product?.image}
                 alt=""
