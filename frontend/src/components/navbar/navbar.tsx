@@ -56,7 +56,6 @@ function Navbar() {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <div className="max-w-full absolute w-full">
       <header className="bg-white dark:bg-gray-900 py-3 fixed top-0  w-full  z-50 shadow-md dark:shadow-gray-800 ">
         <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between gap-4 min-w-0 ">
@@ -269,7 +268,6 @@ function Navbar() {
           </div>
         </div>
       </header>
-    </div>
     </div>
   );
 }
