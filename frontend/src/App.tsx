@@ -15,7 +15,11 @@ import Kids from "./components/pages/women-men-kids/kids";
 import Checkout from "./components/pages/checkout/checkout";
 import ProtectedRoute from "./components/protectedRoute/protectedRoute";
 import Confirmation from "./components/pages/confirmation page/confirmation";
-
+import MyOrders from "./components/pages/my orders/MyOrders";
+import Wishlist from "./components/pages/wishlist/Wishlist";
+import HelpCenter from "./components/pages/helpcenter/HelpCenter";
+import Settings from "./components/pages/settings/Settings";
+import MsgCenter from "./components/pages/message center/MsgCenter";
 function App() {
   const { darkMode } = useContext(ShopContext)!;
   const user = localStorage.getItem("user");
@@ -37,6 +41,11 @@ function App() {
 
               <Route path="/kids" element={<Kids />} />
 
+              <Route path="/myOrders" element={<MyOrders />} /> 
+               <Route path="/wishlists" element={<Wishlist />} /> 
+              <Route path="/help center" element={<HelpCenter />} />
+              <Route path="/settings" element={<Settings />} />
+              <Route path="/message-center" element={<MsgCenter />} />  
               <Route
                 path="/:category/product/:productId"
                 element={<Product />}

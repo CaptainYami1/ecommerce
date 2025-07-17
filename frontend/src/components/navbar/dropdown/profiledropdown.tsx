@@ -5,6 +5,7 @@ import {
   LuHeadset,
 } from "react-icons/lu";
 import { BiMessageDots } from "react-icons/bi";
+import { Link, useLocation } from "react-router-dom";
 
 const ProfileDropdown = (props: any) => {
   const userString = localStorage.getItem("user");
@@ -17,6 +18,11 @@ const ProfileDropdown = (props: any) => {
     localStorage.removeItem("user");
     window.location.reload();
   };
+
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  const isActive = (route: string) => pathname.includes(route);
   return (
     <div
       className={props.className}
@@ -48,22 +54,37 @@ const ProfileDropdown = (props: any) => {
       <hr className="max-w-[250px] my-1.5" />
 
       <ul className="text-teal-600">
-        <li className="flex items-center gap-2 p-2.5 hover:bg-gray-200 rounded-xl">
+        <Link to="/myOrders"><li className={
+                    isActive("/myOrders")
+                      ? "flex items-center gap-2 p-2.5 bg-teal-600 text-white rounded-xl"
+                      :"flex items-center gap-2 p-2.5 hover:bg-gray-200 rounded-xl"}>
           <LuClipboardList /> My Orders
-        </li>
-        <li className="flex items-center gap-2 p-2.5 hover:bg-gray-200 rounded-xl">
+        </li></Link>
+        <Link to="/message-center"><li className={
+                    isActive("/message-center")
+                      ? "flex items-center gap-2 p-2.5 bg-teal-600 text-white rounded-xl"
+                      :"flex items-center gap-2 p-2.5 hover:bg-gray-200 rounded-xl"}>
           <BiMessageDots /> Message Center
-        </li>
-        <li className="flex items-center gap-2 p-2.5 hover:bg-gray-200 rounded-xl">
+        </li></Link>
+       <Link to="/wishlists"> <li className={
+                    isActive("/wishlists")
+                      ? "flex items-center gap-2 p-2.5 bg-teal-600 text-white rounded-xl"
+                      :"flex items-center gap-2 p-2.5 hover:bg-gray-200 rounded-xl"}>
           <LuHeart /> Wish List
-        </li>
-        <li className="flex items-center gap-2 p-2.5 hover:bg-gray-200 rounded-xl">
+        </li></Link>
+        <Link to="/settings"><li className={
+                    isActive("/settings")
+                      ? "flex items-center gap-2 p-2.5 bg-teal-600 text-white rounded-xl"
+                      :"flex items-center gap-2 p-2.5 hover:bg-gray-200 rounded-xl"}>
           <LuSettings /> Settings
-        </li>
-        <li className="flex items-center gap-2 p-2.5 hover:bg-gray-200 rounded-xl">
+        </li></Link>
+        <Link to="/help center"><li className={
+                    isActive("/help%20center")
+                      ? "flex items-center gap-2 p-2.5 bg-teal-600 text-white rounded-xl"
+                      :"flex items-center gap-2 p-2.5 hover:bg-gray-200 rounded-xl"}>
           <LuHeadset />
           Help Center
-        </li>
+        </li></Link>
       </ul>
     </div>
   );

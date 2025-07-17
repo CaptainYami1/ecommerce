@@ -3,7 +3,9 @@ import { useContext, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ShopContext } from "../../context/shopContext";
 import { AiOutlineUser } from "react-icons/ai";
+import { FiMenu, FiX } from "react-icons/fi";
 import ProfileDropdown from "./dropdown/profiledropdown";
+import Sidebar from "./sidebar/sidebar";
 
 function Navbar() {
   let timeout = useRef<number>(null);
@@ -54,9 +56,14 @@ function Navbar() {
     setDisplay(true);
   };
 
+   const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => setIsOpen(!isOpen);
+
   return (
     <div className={darkMode ? "dark" : ""}>
-      <header className="bg-white dark:bg-gray-900 py-3 fixed top-0  w-full  z-50 shadow-md dark:shadow-gray-800 ">
+      
+      <header className="bg-white w-full dark:bg-gray-900 py-3 fixed top-0 z-50 shadow-md dark:shadow-gray-800 ">
         <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between gap-4 min-w-0 ">
             <div className="md:flex md:items-center md:gap-12 ">
@@ -246,29 +253,23 @@ function Navbar() {
               <div className="block md:hidden">
                 <button
                   title="Toggle Menu"
-                  className="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+                  className="rounded-sm dark:bg-gray-800 p-2 dark:text-gray-100 bg-gray-100 text-gray-600 transition dark:hover:text-gray-100/75 hover:text-gray-600/75"
+                onClick={toggleSidebar}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="size-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
+                 
+          {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
                 </button>
+                <div className="max-w-[10px]">
+                <div className={`fixed right-0 dark:bg-gray-800 bg-gray-100 -mt-1 rounded-bl-xl rounded-tl-xl  bg-opacity-50 z-40 backdrop-blur-sm transition-transform duration-500 ease-out ${isOpen ? "translate-x-1 opacity-100 delay-${index * 500}" : "translate-x-[100%] right-0 opacity-0"
+}`} onMouseOut={()=> setIsOpen(false)} onMouseOver={()=> setIsOpen(true)}><Sidebar /></div>
+              </div>
               </div>
             </div>
           </div>
         </div>
       </header>
-    </div>
+      </div>
+    
   );
 }
 
