@@ -13,6 +13,7 @@ const Sidebar = () => {
 
   const capitalizeFirstLetter = (str: string) =>
     str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+  
   const handleSignOut = () => {
     localStorage.removeItem("user");
     window.location.reload();
@@ -50,10 +51,10 @@ const Sidebar = () => {
           </div>
         </div>
       ) : (
-        <div className="sm:flex hidden">
+        <div className="sm:flex ">
           <Link
             to="/login"
-            className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-teal-800"
+            className="rounded-md bg-[#bdd358] mb-2.5 block px-5 py-2.5 text-lg font-medium text-teal-900 dark:text-gray-900 shadow-sm hover:bg-[#757e45d0] dark:hover:bg-[#e9f180fd]"
           >
             Login/Register
           </Link>
